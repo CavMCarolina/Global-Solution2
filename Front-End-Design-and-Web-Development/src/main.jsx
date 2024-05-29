@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App/>,
     children: [
-      { path: "BlueWatch", element: <Home/> },
+      { path: "/", element: <Home/> },
       { path: "*", element: <PageNotFound/> }
     ],
   },
