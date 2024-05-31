@@ -1,0 +1,94 @@
+@use 'mixins';
+@use 'variables';
+
+// Fonte para texto normal
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
+// Fonte para títulos
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    @include mixins.espacamento(0, 0);
+}
+
+header {
+    position: relative;
+    @include mixins.espacamento(0 0 100vh 0, 0);
+}
+
+main {
+    margin-top: 100vh;
+}
+
+.cabecalho {
+    @include mixins.flex(space-around);
+    @include mixins.espacamento(0, 1rem 0);
+    @include mixins.position(fixed, 0, 0, 100%, auto);
+    transition: background 0.3s, padding 0.3s;
+
+    img {
+        @include mixins.size(150px, auto);
+    }
+
+    a {
+        @include mixins.link(white);
+        margin-right: 20px;
+    }
+
+    .icones_nav {
+        @include mixins.flex(center);
+        gap: 30px;
+    }
+}
+
+.scrolled {
+    border-bottom: 2px solid variables.$cor_principal;
+    background-color: #244b5eb5;
+}
+
+.video-background-container {
+    &::after {
+        content: "";
+        @include mixins.position(absolute);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -999;
+    }
+}
+
+video {
+    @include mixins.position(absolute);
+    z-index: -1000;
+    object-fit: cover;
+    opacity: 1;
+}
+
+#menuBar {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+// Mobile first :)
+@media screen and (max-width: 767px) {
+    nav a {
+        display: none;
+    }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    nav a {
+        display: none;
+    }
+}
+
+// Desktop 
+@media screen and (min-width: 1024px) {
+    #menuBar {
+        display: none;
+    }
+    
+    .cabecalho {
+        @include mixins.espacamento(0, 2rem 0);
+    }
+}

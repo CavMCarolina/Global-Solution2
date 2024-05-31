@@ -1,1 +1,101 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  margin: 0 0 100vh 0;
+  padding: 0;
+}
+
+main {
+  margin-top: 100vh;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: background 0.3s, padding 0.3s;
+}
+.cabecalho img {
+  width: 150px;
+  height: auto;
+}
+.cabecalho a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.cabecalho .icones_nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.scrolled {
+  border-bottom: 2px solid #0E5E85;
+  background-color: rgba(36, 75, 94, 0.7098039216);
+}
+
+.video-background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -999;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+}
+
+#menuBar {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  nav a {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav a {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #menuBar {
+    display: none;
+  }
+  .cabecalho {
+    margin: 0;
+    padding: 2rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
