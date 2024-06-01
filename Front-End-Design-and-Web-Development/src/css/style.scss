@@ -11,15 +11,14 @@
     @include mixins.espacamento(0, 0);
 }
 
-header {
-    position: relative;
-    @include mixins.espacamento(0 0 100vh 0, 0);
+// Estilizações Gerais pensando em mobile first
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    @include mixins.text(auto, 500, auto, uppercase, 2px);
 }
 
-main {
-    margin-top: 100vh;
-}
-
+// Header
 .cabecalho {
     @include mixins.flex(space-around);
     @include mixins.espacamento(0, 1rem 0);
@@ -41,16 +40,26 @@ main {
     }
 }
 
+// Deixar o header bonito quando da scroll
 .scrolled {
     border-bottom: 2px solid variables.$cor_principal;
     background-color: #244b5eb5;
 }
 
+// Estilização do botao do menu
+#menuBar {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+// HOME:
+// Video de fundo
 .video-background-container {
     &::after {
         content: "";
         @include mixins.position(absolute);
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.348);
         z-index: -999;
     }
 }
@@ -62,10 +71,40 @@ video {
     opacity: 1;
 }
 
-#menuBar {
-    background-color: transparent;
-    border: none;
-    color: white;
+// Espaçamento necessário para não ficar texto em cima do vídeo
+main {
+    margin-top: 100vh;
+}
+
+// A importancia dos oceanos
+.porcentagens {
+    @include mixins.text(50px, 600, variables.$cor_principal);
+}
+
+// Realidade
+#realidade {
+    background-image: url('../assets/poluicao.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+
+    // teste
+    padding: 100px;
+}
+
+#importancia {
+    @include mixins.flex(center, column);
+    gap: 50px;
+    @include mixins.espacamento(3rem 0, 0);
+
+    h2, p {
+        text-align: center;
+    }
+
+    div{
+        max-width: 250px;
+    }
 }
 
 // Mobile first :)
@@ -80,6 +119,11 @@ video {
     nav a {
         display: none;
     }
+
+    #importancia {
+        @include mixins.flex(space-around);
+        flex-wrap: wrap;
+    }
 }
 
 // Desktop 
@@ -90,5 +134,9 @@ video {
     
     .cabecalho {
         @include mixins.espacamento(0, 2rem 0);
+    }
+
+    #importancia {
+        @include mixins.flex(space-around);
     }
 }

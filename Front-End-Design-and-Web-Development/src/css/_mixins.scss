@@ -1,9 +1,11 @@
+@use 'variables';
+
 @mixin espacamento($m, $p) {
     margin: $m;
     padding: $p;
 }
 
-@mixin flex($justify, $direction: row, $align: center,) {
+@mixin flex($justify, $direction: row, $align: center) {
     display: flex;
     justify-content: $justify;
     flex-direction: $direction;
@@ -26,4 +28,12 @@
     left: $left;
     width: $w;
     height: $h;
+}
+
+@mixin text($size, $weight: 400, $color: variables.$cor_texto, $transform: none, $spacing: none) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+    letter-spacing: $spacing;
 }
