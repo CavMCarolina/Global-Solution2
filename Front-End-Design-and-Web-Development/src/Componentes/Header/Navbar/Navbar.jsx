@@ -22,14 +22,14 @@ export default function Navbar() {
       ></div>
       <nav>
         <button id="menuBar" onClick={toggleSidebar}>
-          <FaBars size={25}/>
+          <FaBars size={25} />
         </button>
         <div className={sidebarOpen ? "sidebar open" : "sidebar"}>
-          <a href="#importancia">Importância dos Oceanos</a>
-          <a href="#realidade">A Realidade</a>
-          <a href="#solucao">Nossa Solução</a>
-          <a href="#ongs">ONGs</a>
-          <a href="#prototipo">Dados em tempo real</a>
+          <a href="/#importancia">Importância dos Oceanos</a>
+          <a href="/#realidade">A Realidade</a>
+          <a href="/#solucao">Nossa Solução</a>
+          <a href="/#ongs">ONGs</a>
+          <a href="/#prototipo">Dados em tempo real</a>
         </div>
       </nav>
     </>

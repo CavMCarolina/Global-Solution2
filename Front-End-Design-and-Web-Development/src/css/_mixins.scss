@@ -30,10 +30,16 @@
     height: $h;
 }
 
-@mixin text($size, $weight: 400, $color: variables.$cor_texto, $transform: none, $spacing: none) {
+@mixin text($size, $weight: 400, $color: variables.$cor_texto, $transform: none, $spacing: auto) {
     font-size: $size;
     font-weight: $weight;
     color: $color;
     text-transform: $transform;
     letter-spacing: $spacing;
+}
+
+@mixin div-config($bg, $border, $radius) {
+    background-color: $bg;
+    border: 1px solid $border;
+    border-radius: $radius;
 }

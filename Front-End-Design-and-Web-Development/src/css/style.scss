@@ -1,142 +1,282 @@
-@use 'mixins';
-@use 'variables';
+@use "mixins";
+@use "variables";
 
 // Fonte para texto normal
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap");
 
 // Fonte para títulos
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Fonte para as porcentagens
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
-    @include mixins.espacamento(0, 0);
+  @include mixins.espacamento(0, 0);
 }
 
 // Estilizações Gerais pensando em mobile first
-
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    @include mixins.text(auto, 500, auto, uppercase, 2px);
+  font-family: "Montserrat", sans-serif;
+  @include mixins.text(auto, 500, auto, uppercase, 2px);
 }
 
 // Header
 .cabecalho {
-    @include mixins.flex(space-around);
-    @include mixins.espacamento(0, 1rem 0);
-    @include mixins.position(fixed, 0, 0, 100%, auto);
-    transition: background 0.3s, padding 0.3s;
+  @include mixins.flex(space-around);
+  @include mixins.espacamento(0, 1rem 0);
+  @include mixins.position(fixed, 0, 0, 100%, auto);
+  transition: background 0.3s, padding 0.3s;
 
-    img {
-        @include mixins.size(150px, auto);
-    }
+  img {
+    @include mixins.size(150px, auto);
+  }
 
-    a {
-        @include mixins.link(white);
-        margin-right: 20px;
-    }
+  a {
+    @include mixins.link(white);
+    padding: 15px;
 
-    .icones_nav {
-        @include mixins.flex(center);
-        gap: 30px;
+    &:hover {
+      @include mixins.link(white, underline);
     }
+  }
+
+  .icones_nav {
+    @include mixins.flex(center);
+    gap: 30px;
+  }
 }
 
 // Deixar o header bonito quando da scroll
 .scrolled {
-    border-bottom: 2px solid variables.$cor_principal;
-    background-color: #244b5eb5;
+  border-bottom: 2px solid variables.$cor_escura;
+  background-color: #244b5eb5;
+  z-index: 1000;
 }
 
 // Estilização do botao do menu
 #menuBar {
-    background-color: transparent;
-    border: none;
-    color: white;
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 // HOME:
 // Video de fundo
-.video-background-container {
-    &::after {
-        content: "";
-        @include mixins.position(absolute);
-        background: rgba(0, 0, 0, 0.348);
-        z-index: -999;
-    }
+.background-container {
+  &::after {
+    content: "";
+    @include mixins.position(absolute);
+    background: rgba(0, 0, 0, 0.348);
+    z-index: -999;
+  }
 }
 
 video {
-    @include mixins.position(absolute);
-    z-index: -1000;
-    object-fit: cover;
-    opacity: 1;
+  @include mixins.position(absolute);
+  z-index: -1000;
+  object-fit: cover;
+  opacity: 1;
 }
 
 // Espaçamento necessário para não ficar texto em cima do vídeo
 main {
-    margin-top: 100vh;
+  margin-top: 100vh;
 }
 
 // A importancia dos oceanos
 .porcentagens {
-    @include mixins.text(50px, 600, variables.$cor_principal);
-}
-
-// Realidade
-#realidade {
-    background-image: url('../assets/poluicao.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    object-fit: cover;
-
-    // teste
-    padding: 100px;
+  @include mixins.text(50px, 600, variables.$cor_principal);
+  font-family: "Roboto Mono", monospace;
 }
 
 #importancia {
+  h1 {
+    @include mixins.espacamento(0, 1rem);
+  }
+}
+
+.importancia {
+  @include mixins.flex(center, column);
+  gap: 50px;
+  @include mixins.espacamento(2rem 0, 0);
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  div {
+    max-width: 280px;
+  }
+}
+
+// Realidade
+.bg {
+  @include mixins.position(absolute);
+  z-index: -1000;
+  object-fit: cover;
+  opacity: 1;
+}
+
+#realidade {
+  @include mixins.position(relative);
+
+  h1 {
+    color: white;
+    @include mixins.position(relative);
+    @include mixins.espacamento(0, 1rem);
+  }
+
+  #carouselExampleAutoplaying {
+    @include mixins.flex(center);
+    padding-bottom: 5rem;
+
+    .carousel-inner {
+      @include mixins.size(300px, 300px);
+
+      img {
+        object-fit: cover;
+        @include mixins.size(100%, 300px);
+        border: transparent;
+        border-radius: 20px;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: auto;
+      bottom: auto;
+      @include mixins.espacamento(0 1rem, 0);
+    }
+  }
+}
+
+.titulo {
+  @include mixins.espacamento(2rem 0 2rem -20px, 15px 15px 15px 35px);
+  @include mixins.div-config(variables.$cor_principal, variables.$cor_escura, 15px);
+  color: variables.$branco;
+  max-width: fit-content;
+}
+
+#negativo {
+  margin-top: -30px;
+}
+
+.conteudo {
+  @include mixins.espacamento(0 1.5rem, 0);
+}
+
+.botao {
+  @include mixins.div-config(transparent, variables.$cor_principal, 100px);
+  @include mixins.espacamento(0, 15px);
+  color: variables.$cor_principal;
+
+  &:hover {
+    @include mixins.div-config(variables.$cor_principal, variables.$cor_escura, 100px);
+    color: variables.$branco;
+  }
+}
+
+footer {
+  @include mixins.position(relative);
+  @include mixins.espacamento(3rem 0 0, 3rem 0);
+  border-top: 1px solid variables.$cor_escura;
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    @include mixins.text(auto, 500, white, uppercase, 2px);
+  }
+
+  .equipe {
     @include mixins.flex(center, column);
-    gap: 50px;
-    @include mixins.espacamento(3rem 0, 0);
 
-    h2, p {
-        text-align: center;
-    }
+    a {
+      @include mixins.link(white);
 
-    div{
-        max-width: 250px;
+      &:hover {
+        @include mixins.link(white, underline);
+      }
     }
+  }
+
+  .parceiros {
+    margin-top: 3rem;
+    text-align: center;
+
+    .imagens_parceiros {
+      @include mixins.div-config(variables.$branco_transparente, variables.$cor_escura, 15px);
+      @include mixins.espacamento(0 1.5rem, 10px 5px);
+      max-width: 480px;
+
+      img {
+        @include mixins.espacamento(5px 10px, 0);
+      }
+      #o20, #aws {
+        @include mixins.size(120px, auto);
+      }
+
+      #unesco, #softtek {
+        @include mixins.size(100px, auto);
+      }
+
+      #un {
+        @include mixins.size(80px, auto);
+      }
+
+      #ss {
+        @include mixins.size(150px, auto);
+      }
+
+      #usp {
+        @include mixins.size(250px, auto);
+      }
+    }
+  }
 }
 
 // Mobile first :)
 @media screen and (max-width: 767px) {
-    nav a {
-        display: none;
-    }
+  nav a {
+    display: none;
+  }
+
+  footer {
+    @include mixins.flex(center, column);
+  }
 }
 
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    nav a {
-        display: none;
-    }
+  nav a {
+    display: none;
+  }
 
-    #importancia {
-        @include mixins.flex(space-around);
-        flex-wrap: wrap;
-    }
+  .importancia {
+    @include mixins.flex(space-around);
+    flex-wrap: wrap;
+  }
+
+  footer {
+    @include mixins.flex(space-around);
+    flex-wrap: wrap;
+  }
 }
 
-// Desktop 
+// Desktop
 @media screen and (min-width: 1024px) {
-    #menuBar {
-        display: none;
-    }
-    
-    .cabecalho {
-        @include mixins.espacamento(0, 2rem 0);
-    }
+  #menuBar {
+    display: none;
+  }
 
-    #importancia {
-        @include mixins.flex(space-around);
-    }
+  .cabecalho {
+    @include mixins.espacamento(0, 2rem 0);
+  }
+
+  .importancia {
+    @include mixins.flex(space-around);
+  }
+
+  footer {
+    @include mixins.flex(space-around);
+  }
 }
