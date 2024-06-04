@@ -3,6 +3,6 @@ Ele está dividido nas matérias que precisam ser entregues em forma de reposit�
 
 - <a href="./Computacional-Thinking-with-Python/">Computacional Thinking with Python;</a>
 
-- <a href="./Computacional-Thinking-with-Python/">Edge Computing;</a>
+- <a href="./Edge-Computing/">Edge Computing;</a>
 
-- <a href="./Computacional-Thinking-with-Python/">Front-End Design e Web Development</a>
+- <a href="./Front-End-Design-and-Web-Development/">Front-End Design e Web Development</a>
