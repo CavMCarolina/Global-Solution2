@@ -10,8 +10,12 @@ O desafio de Inovação Azul 2024 incentiva nós estudantes a contribuírem para
 ## SOLUÇÃO
 Nossa solução envolve um sistema de monitoramento ambiental, onde utilizamos sensores para medir níveis de O2, acidez (pH) e temperatura. Foi montado uma simulação no simulador Wokwi, onde é possível visualizar os sensores funcionando com as informações que serão fornecidas através do banco de dados. 
 
-## INSTRUÇÕES DE USO
+## REQUISITOS
+- DHT sensor library;
+- WiFi;
+- PubSubClient.
 
+## INSTRUÇÕES DE USO
 
 ## CÓDIGO
 <a href="./blue_watch.c++">Código do BlueWatch =D</a>
