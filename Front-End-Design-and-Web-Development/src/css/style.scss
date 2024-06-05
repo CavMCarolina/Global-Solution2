@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 // Fonte para as porcentagens
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
   @include mixins.espacamento(0, 0);
@@ -18,6 +18,10 @@
 h1 {
   font-family: "Montserrat", sans-serif;
   @include mixins.text(auto, 500, auto, uppercase, 2px);
+}
+
+p {
+  color: variables.$cor_texto;
 }
 
 // Header
@@ -32,11 +36,11 @@ h1 {
   }
 
   a {
-    @include mixins.link(white);
+    @include mixins.link(variables.$branco);
     padding: 15px;
 
     &:hover {
-      @include mixins.link(white, underline);
+      @include mixins.link(variables.$branco, underline);
     }
   }
 
@@ -48,7 +52,7 @@ h1 {
 
 // Deixar o header bonito quando da scroll
 .scrolled {
-  border-bottom: 2px solid variables.$cor_escura;
+  border-bottom: 1px solid variables.$branco;
   background-color: #244b5eb5;
   z-index: 1000;
 }
@@ -57,8 +61,12 @@ h1 {
 #menuBar {
   background-color: transparent;
   border: none;
-  color: white;
+  color: variables.$branco;
 }
+
+// .transicao1 {
+
+// }
 
 // HOME:
 // Video de fundo
@@ -87,6 +95,7 @@ main {
 .porcentagens {
   @include mixins.text(50px, 600, variables.$cor_principal);
   font-family: "Roboto Mono", monospace;
+  text-align: left;
 }
 
 #importancia {
@@ -110,6 +119,13 @@ main {
   }
 }
 
+// .transicao2 {
+//   position: absolute;
+//   @include mixins.size(100%, auto);
+//   @include mixins.espacamento(0, 30px);
+//   @include mixins.div-config(purple, none, none);
+// }
+
 // Realidade
 .bg {
   @include mixins.position(absolute);
@@ -122,7 +138,7 @@ main {
   @include mixins.position(relative);
 
   h1 {
-    color: white;
+    color: variables.$branco;
     @include mixins.position(relative);
     @include mixins.espacamento(0, 1rem);
   }
@@ -137,8 +153,7 @@ main {
       img {
         object-fit: cover;
         @include mixins.size(100%, 300px);
-        border: transparent;
-        border-radius: 20px;
+        @include mixins.div-config(none, transparent, 20px);
       }
     }
 
@@ -151,9 +166,14 @@ main {
   }
 }
 
+// Estilização dos títulos das próximas seções
 .titulo {
   @include mixins.espacamento(2rem 0 2rem -20px, 15px 15px 15px 35px);
-  @include mixins.div-config(variables.$cor_principal, variables.$cor_escura, 15px);
+  @include mixins.div-config(
+    variables.$cor_principal,
+    variables.$cor_escura,
+    15px
+  );
   color: variables.$branco;
   max-width: fit-content;
 }
@@ -164,37 +184,88 @@ main {
 
 .conteudo {
   @include mixins.espacamento(0 1.5rem, 0);
+  text-align: justify;
+}
+
+// ONGs
+.ongs {
+  @include mixins.flex(center, column-reverse);
+
+  .logo_ongs {
+    @include mixins.flex(center);
+    @include mixins.espacamento(1rem 0 2rem 0, 50px 40px);
+    @include mixins.size(100%, 100%);
+  }
+
+  .primeiras {
+    @include mixins.div-config(variables.$branco, variables.$cor_escura, 20px);
+  }
+
+  .restantes {
+    @include mixins.div-config(
+      variables.$cor_principal,
+      variables.$cor_escura,
+      20px
+    );
+  }
+
+  a {
+    @include mixins.link(variables.$cor_principal, none);
+
+    &:hover {
+      @include mixins.link(variables.$cor_principal, underline);
+    }
+  }
+
+  div {
+    margin-bottom: 3rem;
+  }
+}
+
+// O Prototipo
+#prototipo {
+  margin-bottom: 3rem;
+
+  img {
+    @include mixins.size(100%, auto);
+    @include mixins.div-config(none, transparent, 20px);
+    max-width: 550px;
+  }
 }
 
 .botao {
   @include mixins.div-config(transparent, variables.$cor_principal, 100px);
-  @include mixins.espacamento(0, 15px);
+  @include mixins.espacamento(0, 15px 8%);
   color: variables.$cor_principal;
 
   &:hover {
-    @include mixins.div-config(variables.$cor_principal, variables.$cor_escura, 100px);
+    @include mixins.div-config(
+      variables.$cor_principal,
+      variables.$cor_escura,
+      100px
+    );
     color: variables.$branco;
   }
 }
 
 footer {
   @include mixins.position(relative);
-  @include mixins.espacamento(3rem 0 0, 3rem 0);
+  @include mixins.espacamento(0, 3rem 0);
   border-top: 1px solid variables.$cor_escura;
 
   h2 {
     font-family: "Montserrat", sans-serif;
-    @include mixins.text(auto, 500, white, uppercase, 2px);
+    @include mixins.text(auto, 500, variables.$branco, uppercase, 2px);
   }
 
   .equipe {
     @include mixins.flex(center, column);
 
     a {
-      @include mixins.link(white);
+      @include mixins.link(variables.$branco);
 
       &:hover {
-        @include mixins.link(white, underline);
+        @include mixins.link(variables.$branco, underline);
       }
     }
   }
@@ -204,18 +275,25 @@ footer {
     text-align: center;
 
     .imagens_parceiros {
-      @include mixins.div-config(variables.$branco_transparente, variables.$cor_escura, 15px);
-      @include mixins.espacamento(0 1.5rem, 10px 5px);
+      @include mixins.div-config(
+        variables.$branco_transparente,
+        variables.$cor_escura,
+        15px
+      );
+      @include mixins.espacamento(0 1rem, 10px 5px);
       max-width: 480px;
 
       img {
         @include mixins.espacamento(5px 10px, 0);
       }
-      #o20, #aws {
+
+      #o20,
+      #aws {
         @include mixins.size(120px, auto);
       }
 
-      #unesco, #softtek {
+      #unesco,
+      #softtek {
         @include mixins.size(100px, auto);
       }
 
@@ -240,6 +318,17 @@ footer {
     display: none;
   }
 
+  .ongs {
+    img {
+      @include mixins.size(90%, 100%);
+      max-width: 300px;
+    }
+
+    .logo_ongs {
+      max-height: 350px;
+    }
+  }
+
   footer {
     @include mixins.flex(center, column);
   }
@@ -256,6 +345,10 @@ footer {
     flex-wrap: wrap;
   }
 
+  .conteudo {
+    @include mixins.espacamento(auto 7%, 0);
+  }
+
   footer {
     @include mixins.flex(space-around);
     flex-wrap: wrap;
@@ -263,7 +356,7 @@ footer {
 }
 
 // Desktop
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
   #menuBar {
     display: none;
   }
@@ -273,7 +366,42 @@ footer {
   }
 
   .importancia {
+    @include mixins.flex(space-between);
+  }
+
+  .conteudo {
+    @include mixins.espacamento(auto 10%, 0);
+  }
+
+  footer {
     @include mixins.flex(space-around);
+  }
+}
+
+@media  (min-width: 1300px) {
+  #menuBar {
+    display: none;
+  }
+
+  .cabecalho {
+    @include mixins.espacamento(0, 2rem 0);
+  }
+
+  .importancia {
+    @include mixins.flex(space-between);
+  }
+
+  .conteudo {
+    @include mixins.espacamento(auto 10%, 0);
+  }
+  
+  .ongs {
+    @include mixins.flex(space-between, row);
+    gap: 10%;
+    
+    div {
+      min-width: 60%;
+    }
   }
 
   footer {

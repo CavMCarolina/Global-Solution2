@@ -15,6 +15,10 @@ h1 {
   letter-spacing: 2px;
 }
 
+p {
+  color: #3f3f3f;
+}
+
 .cabecalho {
   display: flex;
   justify-content: space-around;
@@ -51,7 +55,7 @@ h1 {
 }
 
 .scrolled {
-  border-bottom: 2px solid #072331;
+  border-bottom: 1px solid white;
   background-color: rgba(36, 75, 94, 0.7098039216);
   z-index: 1000;
 }
@@ -96,6 +100,7 @@ main {
   text-transform: none;
   letter-spacing: auto;
   font-family: "Roboto Mono", monospace;
+  text-align: left;
 }
 
 #importancia h1 {
@@ -165,7 +170,8 @@ main {
      object-fit: cover;
   width: 100%;
   height: 300px;
-  border: transparent;
+  background-color: none;
+  border: 1px solid transparent;
   border-radius: 20px;
 }
 #realidade #carouselExampleAutoplaying .carousel-control-prev,
@@ -194,6 +200,57 @@ main {
 .conteudo {
   margin: 0 1.5rem;
   padding: 0;
+  text-align: justify;
+}
+
+.ongs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.ongs .logo_ongs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+  padding: 50px 40px;
+  width: 100%;
+  height: 100%;
+}
+.ongs .primeiras {
+  background-color: white;
+  border: 1px solid #072331;
+  border-radius: 20px;
+}
+.ongs .restantes {
+  background-color: #0E5E85;
+  border: 1px solid #072331;
+  border-radius: 20px;
+}
+.ongs a {
+  color: #0E5E85;
+  text-decoration: none;
+}
+.ongs a:hover {
+  color: #0E5E85;
+  text-decoration: underline;
+}
+.ongs div {
+  margin-bottom: 3rem;
+}
+
+#prototipo {
+  margin-bottom: 3rem;
+}
+#prototipo img {
+  width: 100%;
+  height: auto;
+  background-color: none;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  max-width: 550px;
 }
 
 .botao {
@@ -201,7 +258,7 @@ main {
   border: 1px solid #0E5E85;
   border-radius: 100px;
   margin: 0;
-  padding: 15px;
+  padding: 15px 8%;
   color: #0E5E85;
 }
 .botao:hover {
@@ -217,7 +274,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  margin: 3rem 0 0;
+  margin: 0;
   padding: 3rem 0;
   border-top: 1px solid #072331;
 }
@@ -251,7 +308,7 @@ footer .parceiros .imagens_parceiros {
   background-color: rgba(255, 255, 255, 0.566);
   border: 1px solid #072331;
   border-radius: 15px;
-  margin: 0 1.5rem;
+  margin: 0 1rem;
   padding: 10px 5px;
   max-width: 480px;
 }
@@ -259,11 +316,13 @@ footer .parceiros .imagens_parceiros img {
   margin: 5px 10px;
   padding: 0;
 }
-footer .parceiros .imagens_parceiros #o20, footer .parceiros .imagens_parceiros #aws {
+footer .parceiros .imagens_parceiros #o20,
+footer .parceiros .imagens_parceiros #aws {
   width: 120px;
   height: auto;
 }
-footer .parceiros .imagens_parceiros #unesco, footer .parceiros .imagens_parceiros #softtek {
+footer .parceiros .imagens_parceiros #unesco,
+footer .parceiros .imagens_parceiros #softtek {
   width: 100px;
   height: auto;
 }
@@ -284,6 +343,14 @@ footer .parceiros .imagens_parceiros #usp {
   nav a {
     display: none;
   }
+  .ongs img {
+    width: 90%;
+    height: 100%;
+    max-width: 300px;
+  }
+  .ongs .logo_ongs {
+    max-height: 350px;
+  }
   footer {
     display: flex;
     justify-content: center;
@@ -302,6 +369,10 @@ footer .parceiros .imagens_parceiros #usp {
     align-items: center;
     flex-wrap: wrap;
   }
+  .conteudo {
+    margin: auto 7%;
+    padding: 0;
+  }
   footer {
     display: flex;
     justify-content: space-around;
@@ -310,7 +381,7 @@ footer .parceiros .imagens_parceiros #usp {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
   #menuBar {
     display: none;
   }
@@ -320,9 +391,48 @@ footer .parceiros .imagens_parceiros #usp {
   }
   .importancia {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .conteudo {
+    margin: auto 10%;
+    padding: 0;
+  }
+  footer {
+    display: flex;
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
+  }
+}
+@media (min-width: 1300px) {
+  #menuBar {
+    display: none;
+  }
+  .cabecalho {
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .importancia {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .conteudo {
+    margin: auto 10%;
+    padding: 0;
+  }
+  .ongs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+  }
+  .ongs div {
+    min-width: 60%;
   }
   footer {
     display: flex;

@@ -1,17 +1,30 @@
 export default function NossaSolucao() {
-    return (
-      <section id="solucao">
-        <h1 className="titulo" id="negativo">Nossa Solução:</h1>
-        <div className="conteudo">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nihil, hic minus omnis beatae quasi nostrum corporis impedit blanditiis consequatur excepturi optio vel culpa exercitationem rem, possimus eius distinctio asperiores?</p>
-        </div>
-      </section>
-    );
-  }
-  
+  return (
+    <section id="solucao">
+      <h1 className="titulo" id="negativo">
+        Nossa Solução:
+      </h1>
+      <div className="conteudo">
+        <p>
+          Devido as dificuldades que os oceanos vêm passando, como o aquecimento
+          global e a poluição, que são considerados os principais causadores do
+          desequilíbrio no ecossistema marinho, resolvemos criar essa solução
+          pois medir parâmetros críticos como o O2, acidez (pH) e temperatura,
+          sendo fundamental para compreender os impactos ambientais e de quais
+          maneiras podemos adiá-los. Além de procurar conservar e proteger o
+          meio ambiente, conscientizar o público, incentivar e promover a
+          sustentabilidade.
+          <br/><br/>
+          Nossa solução envolve um sistema de monitoramento
+          ambiental, onde utilizamos sensores para medir níveis de O2, acidez
+          (pH) e temperatura. Foi montado uma simulação no simulador Wokwi, onde
+          é possível visualizar os sensores funcionando com as informações que
+          serão fornecidas através do banco de dados. Além disso, criamos um
+          site onde será possível ver o local, através de um globo, onde os
+          sensores estão ativos e informações do estado do oceano, ONGS e
+          parceiros.
+        </p>
+      </div>
+    </section>
+  );
+}

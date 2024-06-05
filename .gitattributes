@@ -1,3 +1,4 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 assets/* filter=lfs diff=lfs merge=lfs -text
 src/* filter=lfs diff=lfs merge=lfs -text
+video_ongs.mp4 filter=lfs diff=lfs merge=lfs -text

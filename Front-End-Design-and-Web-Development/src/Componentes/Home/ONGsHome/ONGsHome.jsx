@@ -6,9 +6,7 @@ export default function ONGsHome() {
       <h1 className="titulo">ONGs na causa:</h1>
       <div className="conteudo">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde
-          alias tenetur nobis ut possimus tempora qui! Corporis quis provident
-          ad iusto deleniti blanditiis enim illo atque quod? Dolorum, iure.
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque nemo nulla, quis modi unde commodi suscipit repellat officiis sunt reprehenderit molestiae nihil voluptatum earum minima ea, perferendis quam qui.
         </p>
         <Link to="BlueWatch/ONGs">
           <button className="botao">

@@ -1,20 +1,44 @@
 import { Link } from "react-router-dom";
+import circuito from "../../../assets/circuito.jpg";
 
 export default function PrototipoHome() {
   return (
     <section id="prototipo">
       <h1 className="titulo">O Protótipo:</h1>
       <div className="conteudo">
+        <div>
+          <p>
+            O nosso projeto conta com um ESP32 conectado a dois potenciômetros e
+            um sensor DHT22. O potenciômetro, do tipo slide, é utilizado para
+            simular a leitura do pH da água, variando de 0 a 14.
+            <br />
+            O segundo potenciômetro mede a oxigenação da água, com uma escala de
+            0 a 100%. Já o sensor DHT22 é responsável por captar a temperatura
+            da água.
+            <br />
+            Com os sensores em funcionamento, os dados são direcionados para o
+            HiveMQ, onde devem ser conectados ao tópico /GS2/#. Após isso, os
+            dados são recebidos dos sensores em tempo real. Finalmente, com o
+            HiveMQ conectado ao NodeRed, o tópico é capturado e passado por uma
+            função para ser interpretado pelo TagoIO.
+          </p>
+          <img src={circuito} />
+        </div>
+        <br />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde
-          alias tenetur nobis ut possimus tempora qui! Corporis quis provident
-          ad iusto deleniti blanditiis enim illo atque quod? Dolorum, iure.
+          Por fim, os dados são apresentados pelo TagoIO, onde os três sensores
+          são identificados por temp1, ph1 e oxy1, conforme definidos no HiveMQ.
+          <br />
+          Além disso, foram implementadas três funções no NodeRed que recebem
+          dados de localização, que representa a posição de cada sensor.
         </p>
-        <Link to="BlueWatch/Prototipo">
-          <button className="botao">
-            Clique aqui para ver os dados em tempo real!
-          </button>
-        </Link>
+        <div className="centralizar_botao">
+          <Link to="BlueWatch/Prototipo">
+            <button className="botao">
+              Clique aqui para ver os dados em tempo real!
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );

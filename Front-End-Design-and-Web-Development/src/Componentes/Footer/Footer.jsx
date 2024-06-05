@@ -11,7 +11,7 @@ export default function Footer() {
   const integrantes = [
     {
       nome: "Beatriz Silva",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/beatriz-sp-rocha/",
       id: "bea"
     },
     {

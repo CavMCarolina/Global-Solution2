@@ -1,6 +1,6 @@
-import video from "../../../assets/GS-video.mp4";
+import video from "../../../assets/video_ongs.mp4";
 
-export default function Video() {
+export default function VideoONGs() {
   return (
     <div className="background-container">
       {/* Video de Fundo */}
