@@ -5,10 +5,10 @@
 - Lucas Masaki - RM553084.
 
 ## PROBLEMA
-Atualmente, o aquecimento global, a poluição e o desmatamento são alguns dos principais fatores que afetam os oceanos, fazendo com que o ambiente se torna cada vez mais hostil. A falta de conscientização da sociedade é um fator significativo, pois muitos não estão cientes dos ocorridos. Se continuarmos a degradar esses ecossistemas, a sobrevivência no planeta será cada vez mais difícil.
+ Atualmente, o aquecimento global, a poluição e o desmatamento são alguns dos principais fatores que afetam os oceanos, fazendo com que o ambiente se torna cada vez mais hostil. A falta de conscientização da sociedade é um fator significativo, pois muitos não estão cientes dos ocorridos. Se continuarmos a degradar esses ecossistemas, a sobrevivência no planeta será cada vez mais difícil.
 
 ## SOLUÇÃO
-O objetivo do nosso trabalho em Python é reportar monitorar e reportar o nível de oxigenação, acidez (pH) e pegando a temperatura. O sistema coleta dados de temperatura em intervalos de tempo, registrando os picos mais baixos e mais altos, além de calcular a média das mesmas. Alertas são emitidos de acordo com os seguintes critérios:
+ O objetivo do nosso trabalho em Python é reportar monitorar e reportar o nível de oxigenação, acidez (pH) e pegando a temperatura. O sistema coleta dados de temperatura em intervalos de tempo, registrando os picos mais baixos e mais altos, além de calcular a média das mesmas. Alertas são emitidos de acordo com os seguintes critérios:
 
 Oxigenação:
 - Vermelho: abaixo de 30%;
