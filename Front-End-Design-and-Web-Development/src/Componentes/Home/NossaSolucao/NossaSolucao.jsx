@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NossaSolucao() {
   return (
     <section id="solucao">
-      <h1 className="titulo" id="negativo">
+      <h1 className="titulo negativo">
         Nossa Solução:
       </h1>
       <div className="conteudo">

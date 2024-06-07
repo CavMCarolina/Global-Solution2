@@ -48,13 +48,6 @@ p {
   color: white;
   text-decoration: underline;
 }
-.cabecalho .icones_nav {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-}
 
 #menuBar {
   background-color: transparent;
@@ -190,7 +183,7 @@ video {
   max-width: fit-content;
 }
 
-#negativo {
+.negativo {
   margin-top: -30px;
 }
 
@@ -264,12 +257,32 @@ video {
   margin: 0;
   padding: 15px 8%;
   color: #0E5E85;
+  position: relative;
 }
 .botao:hover {
   background-color: #0E5E85;
   border: 1px solid #072331;
   border-radius: 100px;
   color: white;
+}
+
+.foto_api {
+  margin: 2rem 0;
+  padding: 0;
+}
+.foto_api img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 300px;
+  background-color: none;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+#botao_api {
+  margin: 0 1rem;
+  padding: auto;
 }
 
 form {
@@ -390,6 +403,9 @@ footer .parceiros .imagens_parceiros #usp {
   .overlay.open {
     display: block;
   }
+  #realidade h1 {
+    color: white;
+  }
   .ongs img {
     width: 90%;
     height: 100%;
@@ -461,6 +477,10 @@ footer .parceiros .imagens_parceiros #usp {
     margin: auto 7%;
     padding: 0;
   }
+  .foto_api img {
+    width: 100%;
+    height: 500px;
+  }
   #realidade #carouselExampleAutoplaying {
     margin: 0;
     padding: 2rem 0 5rem;
@@ -500,6 +520,10 @@ footer .parceiros .imagens_parceiros #usp {
     margin: auto 10%;
     padding: 0;
   }
+  .foto_api img {
+    width: 100%;
+    height: 500px;
+  }
   #realidade #carouselExampleAutoplaying {
     margin: 0;
     padding: 2rem 0 5rem;
@@ -536,6 +560,10 @@ footer .parceiros .imagens_parceiros #usp {
   .conteudo {
     margin: auto 10%;
     padding: 0;
+  }
+  .foto_api img {
+    width: 100%;
+    height: 650px;
   }
   #realidade #carouselExampleAutoplaying {
     margin: 0;

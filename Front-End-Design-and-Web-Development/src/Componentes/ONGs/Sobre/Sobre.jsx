@@ -3,7 +3,7 @@ import ongs from "../../../data/ongs.json";
 export default function Sobre() {
   return (
     <>
-      <h1 className="titulo" id="negativo">
+      <h1 className="titulo negativo ">
         ONGs na causa:
       </h1>
       <div className="conteudo">

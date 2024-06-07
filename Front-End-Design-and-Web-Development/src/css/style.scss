@@ -45,11 +45,6 @@ p {
       @include mixins.link(variables.$branco, underline);
     }
   }
-
-  .icones_nav {
-    @include mixins.flex(center);
-    gap: 30px;
-  }
 }
 
 #menuBar {
@@ -184,7 +179,7 @@ video {
   max-width: fit-content;
 }
 
-#negativo {
+.negativo {
   margin-top: -30px;
 }
 
@@ -247,6 +242,7 @@ video {
   @include mixins.div-config(transparent, variables.$cor_principal, 100px);
   @include mixins.espacamento(0, 15px 8%);
   color: variables.$cor_principal;
+  position: relative;
 
   &:hover {
     @include mixins.div-config(
@@ -256,6 +252,20 @@ video {
     );
     color: variables.$branco;
   }
+}
+
+.foto_api {
+  @include mixins.espacamento(2rem 0, 0);
+
+  img {
+    object-fit: cover;
+    @include mixins.size(100%, 300px);
+    @include mixins.div-config(none, transparent, 20px);
+  }
+}
+
+#botao_api {
+  @include mixins.espacamento(0 1rem, auto);
 }
 
 form {
@@ -369,6 +379,12 @@ footer {
     display: block;
   }
 
+  #realidade {
+    h1 {
+      color: variables.$branco
+    }
+  }
+
   // ONGs
   .ongs {
     img {
@@ -438,6 +454,12 @@ footer {
     @include mixins.espacamento(auto 7%, 0);
   }
 
+  .foto_api {
+    img {
+      @include mixins.size(100%, 500px);
+    }
+  }
+
   #realidade {
     #carouselExampleAutoplaying {
       @include mixins.espacamento(0, 2rem 0 5rem);
@@ -477,6 +499,12 @@ footer {
     @include mixins.espacamento(auto 10%, 0);
   }
 
+  .foto_api {
+    img {
+      @include mixins.size(100%, 500px);
+    }
+  }
+
   #realidade {
     #carouselExampleAutoplaying {
       @include mixins.espacamento(0, 2rem 0 5rem);
@@ -513,6 +541,12 @@ footer {
     @include mixins.espacamento(auto 10%, 0);
   }
 
+  .foto_api {
+    img {
+      @include mixins.size(100%, 650px);
+    }
+  }
+  
   #realidade {
     #carouselExampleAutoplaying {
       @include mixins.espacamento(0, 2rem 0 5rem);

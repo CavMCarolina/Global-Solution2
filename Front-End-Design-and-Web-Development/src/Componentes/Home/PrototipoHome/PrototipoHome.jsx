@@ -35,7 +35,7 @@ export default function PrototipoHome() {
             dados de localização, que representa a posição de cada sensor.
           </p>
           <div className="centralizar_botao">
-            <Link to="BlueWatch/Prototipo">
+            <Link to="https://65f9831160854d0010e08c7e.tago.run/dashboards/info/66567033279732000954bf55?anonymousToken=00000000-65f9-8311-6085-4d0010e08c7e">
               <button className="botao">
                 Veja os dados em tempo real!
               </button>

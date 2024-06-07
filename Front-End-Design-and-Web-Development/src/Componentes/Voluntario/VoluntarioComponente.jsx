@@ -27,7 +27,7 @@ export default function VoluntarioComponente() {
   return (
     <>
       <VideoVoluntario />
-      <h1 className="titulo" id="negativo">
+      <h1 className="titulo negativo">
         Junte-se a Nós!
       </h1>
       {/* Formulario do Bootstrap */}
