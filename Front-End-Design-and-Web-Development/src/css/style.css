@@ -41,6 +41,7 @@ p {
 .cabecalho a {
   color: white;
   text-decoration: none;
+  margin: 0;
   padding: 15px;
 }
 .cabecalho a:hover {
@@ -59,7 +60,7 @@ p {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
 
@@ -365,8 +366,9 @@ footer .parceiros .imagens_parceiros #usp {
   /* Links do sidebar */
   .sidebar a {
     color: white;
-    padding: 10px 0;
     text-decoration: none;
+    margin: 0;
+    padding: 10px 0;
   }
   /* Overlay */
   .overlay {
@@ -424,8 +426,9 @@ footer .parceiros .imagens_parceiros #usp {
   /* Links do sidebar */
   .sidebar a {
     color: white;
-    padding: 10px 0;
     text-decoration: none;
+    margin: 0;
+    padding: 10px 0;
   }
   /* Overlay */
   .overlay {
