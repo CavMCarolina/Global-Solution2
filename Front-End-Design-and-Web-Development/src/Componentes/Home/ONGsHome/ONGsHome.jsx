@@ -6,7 +6,7 @@ export default function ONGsHome() {
       <h1 className="titulo">ONGs na causa:</h1>
       <div className="conteudo">
         <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque nemo nulla, quis modi unde commodi suscipit repellat officiis sunt reprehenderit molestiae nihil voluptatum earum minima ea, perferendis quam qui.
+          Os ONGs são parte importante da causa, uma vez que conscientizam a sociedade por meio de movimentos sustentáveis e de grande ajuda para a humanidade. Muitas delas são focadas em auxiliar os oceanos, veja abaixo algumas delas.
         </p>
         <Link to="BlueWatch/ONGs">
           <button className="botao">

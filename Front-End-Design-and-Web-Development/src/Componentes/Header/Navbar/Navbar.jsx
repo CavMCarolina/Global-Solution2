@@ -25,11 +25,11 @@ export default function Navbar() {
           <FaBars size={25} />
         </button>
         <div className={sidebarOpen ? "sidebar open" : "sidebar"}>
-          <a href="/#importancia">Importância dos Oceanos</a>
-          <a href="/#realidade">A Realidade</a>
-          <a href="/#solucao">Nossa Solução</a>
-          <a href="/#ongs">ONGs</a>
-          <a href="/#prototipo">Dados em tempo real</a>
+          <a href="/#importancia" onClick={closeSidebar}>Importância dos Oceanos</a>
+          <a href="/#realidade" onClick={closeSidebar}>A Realidade</a>
+          <a href="/#solucao" onClick={closeSidebar}>Nossa Solução</a>
+          <a href="/#ongs" onClick={closeSidebar}>ONGs</a>
+          <a href="/#prototipo" onClick={closeSidebar}>Dados em tempo real</a>
         </div>
       </nav>
     </>

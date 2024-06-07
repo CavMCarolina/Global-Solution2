@@ -50,23 +50,18 @@ p {
   }
 }
 
+#menuBar {
+  @include mixins.div-config(transparent, transparent, 0);
+  color: #fff;
+  cursor: pointer;
+}
+
 // Deixar o header bonito quando da scroll
 .scrolled {
   border-bottom: 1px solid variables.$branco;
   background-color: #244b5eb5;
   z-index: 1000;
 }
-
-// Estilização do botao do menu
-#menuBar {
-  background-color: transparent;
-  border: none;
-  color: variables.$branco;
-}
-
-// .transicao1 {
-
-// }
 
 // HOME:
 // Video de fundo
@@ -118,13 +113,6 @@ main {
     max-width: 280px;
   }
 }
-
-// .transicao2 {
-//   position: absolute;
-//   @include mixins.size(100%, auto);
-//   @include mixins.espacamento(0, 30px);
-//   @include mixins.div-config(purple, none, none);
-// }
 
 // Realidade
 .bg {
@@ -225,11 +213,15 @@ main {
 // O Prototipo
 #prototipo {
   margin-bottom: 3rem;
+}
+
+.prototipo {
+  @include mixins.flex(center, column);
 
   img {
     @include mixins.size(100%, auto);
     @include mixins.div-config(none, transparent, 20px);
-    max-width: 550px;
+    max-width: 500px;
   }
 }
 
@@ -314,10 +306,38 @@ footer {
 
 // Mobile first :)
 @media screen and (max-width: 767px) {
-  nav a {
-    display: none;
+  // Estilizações para o sidebar;
+  /* Overlay */
+  .overlay {
+    @include mixins.position(fixed);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
   }
 
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    @include mixins.position(fixed, 0, auto, 250px);
+    right: -250px;
+    @include mixins.flex(auto, column);
+    background-color: #244b5e;
+    border-left: 1px solid variables.$branco;
+    @include mixins.espacamento(0, 2rem 1rem);
+    transition: right 0.3s;
+    z-index: 3;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  // ONGs
   .ongs {
     img {
       @include mixins.size(90%, 100%);
@@ -329,6 +349,7 @@ footer {
     }
   }
 
+  // Footer
   footer {
     @include mixins.flex(center, column);
   }
@@ -336,8 +357,35 @@ footer {
 
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  nav a {
-    display: none;
+  // Estilizações para o sidebar;
+  /* Overlay */
+  .overlay {
+    @include mixins.position(fixed);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    @include mixins.position(fixed, 0, auto, 250px);
+    right: -250px;
+    @include mixins.flex(auto, column);
+    background-color: #244b5e;
+    border-left: 1px solid variables.$branco;
+    @include mixins.espacamento(0, 2rem 1rem);
+    transition: right 0.3s;
+    z-index: 3;
+  }
+
+  .sidebar.open {
+    right: 0;
   }
 
   .importancia {
@@ -347,6 +395,20 @@ footer {
 
   .conteudo {
     @include mixins.espacamento(auto 7%, 0);
+  }
+
+  #realidade {
+    #carouselExampleAutoplaying {
+      padding-bottom: 5rem;
+
+      .carousel-inner {
+        @include mixins.size(70%, 500px);
+
+        img {
+          @include mixins.size(100%, 500px);
+        }
+      }
+    }
   }
 
   footer {
@@ -373,12 +435,26 @@ footer {
     @include mixins.espacamento(auto 10%, 0);
   }
 
+  #realidade {
+    #carouselExampleAutoplaying {
+      padding-bottom: 5rem;
+
+      .carousel-inner {
+        @include mixins.size(70%, 500px);
+
+        img {
+          @include mixins.size(100%, 500px);
+        }
+      }
+    }
+  }
+
   footer {
     @include mixins.flex(space-around);
   }
 }
 
-@media  (min-width: 1300px) {
+@media (min-width: 1300px) {
   #menuBar {
     display: none;
   }
@@ -394,13 +470,46 @@ footer {
   .conteudo {
     @include mixins.espacamento(auto 10%, 0);
   }
-  
+
+  #realidade {
+    #carouselExampleAutoplaying {
+      padding-bottom: 5rem;
+
+      .carousel-inner {
+        @include mixins.size(70%, 650px);
+
+        img {
+          @include mixins.size(100%, 650px);
+        }
+      }
+    }
+  }
+
+  .prototipo {
+    @include mixins.flex(space-between);
+
+    p {
+      max-width: 50%;
+    }
+  }
+
   .ongs {
-    @include mixins.flex(space-between, row);
-    gap: 10%;
-    
-    div {
-      min-width: 60%;
+    @include mixins.flex(space-between, row, start);
+    @include mixins.espacamento(1.5rem 0 3rem, 0);
+
+    .texto {
+      max-width: 50%;
+      margin-bottom: 0;
+    }
+
+    .logo_ongs {
+      @include mixins.espacamento(0, auto);
+      max-width: 440px;
+      max-height: 60%;
+
+      img {
+        max-width: 360px;
+      }
     }
   }
 

@@ -6,7 +6,7 @@ export default function PrototipoHome() {
     <section id="prototipo">
       <h1 className="titulo">O Protótipo:</h1>
       <div className="conteudo">
-        <div>
+        <div className="prototipo">
           <p>
             O nosso projeto conta com um ESP32 conectado a dois potenciômetros e
             um sensor DHT22. O potenciômetro, do tipo slide, é utilizado para
@@ -25,19 +25,22 @@ export default function PrototipoHome() {
           <img src={circuito} />
         </div>
         <br />
-        <p>
-          Por fim, os dados são apresentados pelo TagoIO, onde os três sensores
-          são identificados por temp1, ph1 e oxy1, conforme definidos no HiveMQ.
-          <br />
-          Além disso, foram implementadas três funções no NodeRed que recebem
-          dados de localização, que representa a posição de cada sensor.
-        </p>
-        <div className="centralizar_botao">
-          <Link to="BlueWatch/Prototipo">
-            <button className="botao">
-              Clique aqui para ver os dados em tempo real!
-            </button>
-          </Link>
+        <div>
+          <p>
+            Por fim, os dados são apresentados pelo TagoIO, onde os três
+            sensores são identificados por temp1, ph1 e oxy1, conforme definidos
+            no HiveMQ.
+            <br />
+            Além disso, foram implementadas três funções no NodeRed que recebem
+            dados de localização, que representa a posição de cada sensor.
+          </p>
+          <div className="centralizar_botao">
+            <Link to="BlueWatch/Prototipo">
+              <button className="botao">
+                Clique aqui para ver os dados em tempo real!
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

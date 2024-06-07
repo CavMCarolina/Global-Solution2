@@ -4,6 +4,7 @@ import logo from "../../assets/BlueWatch.png";
 import React, { useState, useEffect } from "react";
 
 export default function Header() {
+  // Para o header ficar fixo e mudar de cor
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {

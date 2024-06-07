@@ -11,7 +11,7 @@ export default function Sobre() {
           <div key={ong.id}>
             <h2 className="porcentagens">{ong.nome}</h2>
             <div className="ongs">
-              <div>
+              <div className="texto">
                 <p>
                   {ong.sobre}
                   <br />

@@ -54,16 +54,18 @@ p {
   gap: 30px;
 }
 
+#menuBar {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
 .scrolled {
   border-bottom: 1px solid white;
   background-color: rgba(36, 75, 94, 0.7098039216);
   z-index: 1000;
-}
-
-#menuBar {
-  background-color: transparent;
-  border: none;
-  color: white;
 }
 
 .background-container::after {
@@ -244,13 +246,20 @@ main {
 #prototipo {
   margin-bottom: 3rem;
 }
-#prototipo img {
+
+.prototipo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.prototipo img {
   width: 100%;
   height: auto;
   background-color: none;
   border: 1px solid transparent;
   border-radius: 20px;
-  max-width: 550px;
+  max-width: 500px;
 }
 
 .botao {
@@ -340,8 +349,43 @@ footer .parceiros .imagens_parceiros #usp {
 }
 
 @media screen and (max-width: 767px) {
-  nav a {
-    display: none;
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 250px;
+    height: 100%;
+    right: -250px;
+    display: flex;
+    justify-content: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #244b5e;
+    border-left: 1px solid white;
+    margin: 0;
+    padding: 2rem 1rem;
+    transition: right 0.3s;
+    z-index: 3;
+  }
+  .sidebar.open {
+    right: 0;
   }
   .ongs img {
     width: 90%;
@@ -359,8 +403,43 @@ footer .parceiros .imagens_parceiros #usp {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  nav a {
-    display: none;
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 250px;
+    height: 100%;
+    right: -250px;
+    display: flex;
+    justify-content: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #244b5e;
+    border-left: 1px solid white;
+    margin: 0;
+    padding: 2rem 1rem;
+    transition: right 0.3s;
+    z-index: 3;
+  }
+  .sidebar.open {
+    right: 0;
   }
   .importancia {
     display: flex;
@@ -372,6 +451,17 @@ footer .parceiros .imagens_parceiros #usp {
   .conteudo {
     margin: auto 7%;
     padding: 0;
+  }
+  #realidade #carouselExampleAutoplaying {
+    padding-bottom: 5rem;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner {
+    width: 70%;
+    height: 500px;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner img {
+    width: 100%;
+    height: 500px;
   }
   footer {
     display: flex;
@@ -399,6 +489,17 @@ footer .parceiros .imagens_parceiros #usp {
     margin: auto 10%;
     padding: 0;
   }
+  #realidade #carouselExampleAutoplaying {
+    padding-bottom: 5rem;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner {
+    width: 70%;
+    height: 500px;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner img {
+    width: 100%;
+    height: 500px;
+  }
   footer {
     display: flex;
     justify-content: space-around;
@@ -424,15 +525,46 @@ footer .parceiros .imagens_parceiros #usp {
     margin: auto 10%;
     padding: 0;
   }
-  .ongs {
+  #realidade #carouselExampleAutoplaying {
+    padding-bottom: 5rem;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner {
+    width: 70%;
+    height: 650px;
+  }
+  #realidade #carouselExampleAutoplaying .carousel-inner img {
+    width: 100%;
+    height: 650px;
+  }
+  .prototipo {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    gap: 10%;
   }
-  .ongs div {
-    min-width: 60%;
+  .prototipo p {
+    max-width: 50%;
+  }
+  .ongs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    margin: 1.5rem 0 3rem;
+    padding: 0;
+  }
+  .ongs .texto {
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+  .ongs .logo_ongs {
+    margin: 0;
+    padding: auto;
+    max-width: 440px;
+    max-height: 60%;
+  }
+  .ongs .logo_ongs img {
+    max-width: 360px;
   }
   footer {
     display: flex;
