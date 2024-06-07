@@ -6,3 +6,8 @@ Ele está dividido nas matérias que precisam ser entregues em forma de reposit�
 - <a href="./Edge-Computing/">Edge Computing;</a>
 
 - <a href="./Front-End-Design-and-Web-Development/">Front-End Design e Web Development</a>
+
+# Grupo:
+- Beatriz Silva, 553455;
+- Carolina Machado, 552925;
+- Lucas Masaki, 553084;

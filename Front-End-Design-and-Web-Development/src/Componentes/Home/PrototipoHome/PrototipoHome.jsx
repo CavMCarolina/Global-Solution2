@@ -37,7 +37,7 @@ export default function PrototipoHome() {
           <div className="centralizar_botao">
             <Link to="BlueWatch/Prototipo">
               <button className="botao">
-                Clique aqui para ver os dados em tempo real!
+                Veja os dados em tempo real!
               </button>
             </Link>
           </div>

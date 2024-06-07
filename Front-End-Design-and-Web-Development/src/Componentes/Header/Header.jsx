@@ -2,6 +2,7 @@ import Navbar from "./Navbar/Navbar";
 import { FaUserCircle } from "react-icons/fa";
 import logo from "../../assets/BlueWatch.png";
 import React, { useState, useEffect } from "react";
+import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Header() {
   // Para o header ficar fixo e mudar de cor
@@ -23,6 +24,12 @@ export default function Header() {
     };
   }, []);
 
+  // Botão estilizado para login
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => console.log(tokenResponse),
+    onError: () => console.log("Login Failed"),
+  });
+
   return (
     <header className={`cabecalho ${scrolling ? "scrolled" : ""}`}>
       <img src={logo} alt="Logo BlueWatch" />
@@ -33,7 +40,10 @@ export default function Header() {
           style={{
             color: "white",
           }}
-        />
+          onClick={() => login()}
+        >
+          Login with Google
+        </FaUserCircle>
       </div>
     </header>
   );
