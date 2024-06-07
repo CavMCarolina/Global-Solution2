@@ -30,7 +30,6 @@ export default function Importancia() {
           ))}
         </div>
       </div>
-      <div className="transicao2"></div>
     </section>
   );
 }

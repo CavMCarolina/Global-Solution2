@@ -32,6 +32,7 @@ p {
   width: 100%;
   height: auto;
   transition: background 0.3s, padding 0.3s;
+  z-index: 1000;
 }
 .cabecalho img {
   width: 150px;
@@ -68,31 +69,26 @@ p {
   z-index: 1000;
 }
 
-.background-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.348);
-  z-index: -999;
+.background-container {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1000;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 1;
+  position: relative;
 }
 
-main {
-  margin-top: 100vh;
+.transicao1 {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 92.64%);
 }
 
 .porcentagens {
@@ -105,6 +101,9 @@ main {
   text-align: left;
 }
 
+#importancia {
+  position: relative;
+}
 #importancia h1 {
   margin: 0;
   padding: 1rem;
@@ -116,7 +115,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin: 2rem 0;
+  margin: 3rem 0;
   padding: 0;
 }
 .importancia h2,
@@ -127,32 +126,25 @@ main {
   max-width: 280px;
 }
 
-.bg {
+.transicao2 {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1000;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 1;
+  height: 20vh;
+  top: 0;
+  background: linear-gradient(180deg, #ffffff 32.64%, rgba(255, 255, 255, 0) 90%);
 }
 
 #realidade {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/poluicao.jpg");
+  background-size: cover;
+}
+#realidade .realidade {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 #realidade h1 {
-  color: white;
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 1rem;
 }
@@ -161,7 +153,8 @@ main {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  padding-bottom: 5rem;
+  margin: 1rem 0;
+  padding: 0 0 2rem;
 }
 #realidade #carouselExampleAutoplaying .carousel-inner {
   width: 300px;
@@ -185,6 +178,7 @@ main {
 }
 
 .titulo {
+  position: relative;
   margin: 2rem 0 2rem -20px;
   padding: 15px 15px 15px 35px;
   background-color: #0E5E85;
@@ -278,11 +272,8 @@ main {
 }
 
 footer {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/footer.png");
+  background-size: cover;
   margin: 0;
   padding: 3rem 0;
   border-top: 1px solid #072331;
@@ -349,43 +340,48 @@ footer .parceiros .imagens_parceiros #usp {
 }
 
 @media screen and (max-width: 767px) {
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    align-items: none;
+    width: 250px;
+    height: 100%;
+    background-color: #0E5E85;
+    border-left: 1px solid white;
+    margin: 0;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  /* Sidebar aberta */
+  .sidebar.open {
+    right: 0; /* Move para dentro da tela */
+  }
+  /* Links do sidebar */
+  .sidebar a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+  }
   /* Overlay */
   .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
+  /* Overlay aberta */
   .overlay.open {
-    opacity: 1;
-    visibility: visible;
-  }
-  /* Sidebar */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: auto;
-    width: 250px;
-    height: 100%;
-    right: -250px;
-    display: flex;
-    justify-content: auto;
-    flex-direction: column;
-    align-items: center;
-    background-color: #244b5e;
-    border-left: 1px solid white;
-    margin: 0;
-    padding: 2rem 1rem;
-    transition: right 0.3s;
-    z-index: 3;
-  }
-  .sidebar.open {
-    right: 0;
+    display: block;
   }
   .ongs img {
     width: 90%;
@@ -403,43 +399,48 @@ footer .parceiros .imagens_parceiros #usp {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    align-items: none;
+    width: 250px;
+    height: 100%;
+    background-color: #0E5E85;
+    border-left: 1px solid white;
+    margin: 0;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  /* Sidebar aberta */
+  .sidebar.open {
+    right: 0; /* Move para dentro da tela */
+  }
+  /* Links do sidebar */
+  .sidebar a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+  }
   /* Overlay */
   .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
+  /* Overlay aberta */
   .overlay.open {
-    opacity: 1;
-    visibility: visible;
-  }
-  /* Sidebar */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: auto;
-    width: 250px;
-    height: 100%;
-    right: -250px;
-    display: flex;
-    justify-content: auto;
-    flex-direction: column;
-    align-items: center;
-    background-color: #244b5e;
-    border-left: 1px solid white;
-    margin: 0;
-    padding: 2rem 1rem;
-    transition: right 0.3s;
-    z-index: 3;
-  }
-  .sidebar.open {
-    right: 0;
+    display: block;
   }
   .importancia {
     display: flex;
@@ -453,7 +454,8 @@ footer .parceiros .imagens_parceiros #usp {
     padding: 0;
   }
   #realidade #carouselExampleAutoplaying {
-    padding-bottom: 5rem;
+    margin: 0;
+    padding: 2rem 0 5rem;
   }
   #realidade #carouselExampleAutoplaying .carousel-inner {
     width: 70%;
@@ -481,16 +483,18 @@ footer .parceiros .imagens_parceiros #usp {
   }
   .importancia {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
   }
   .conteudo {
     margin: auto 10%;
     padding: 0;
   }
   #realidade #carouselExampleAutoplaying {
-    padding-bottom: 5rem;
+    margin: 0;
+    padding: 2rem 0 5rem;
   }
   #realidade #carouselExampleAutoplaying .carousel-inner {
     width: 70%;
@@ -526,7 +530,8 @@ footer .parceiros .imagens_parceiros #usp {
     padding: 0;
   }
   #realidade #carouselExampleAutoplaying {
-    padding-bottom: 5rem;
+    margin: 0;
+    padding: 2rem 0 5rem;
   }
   #realidade #carouselExampleAutoplaying .carousel-inner {
     width: 70%;

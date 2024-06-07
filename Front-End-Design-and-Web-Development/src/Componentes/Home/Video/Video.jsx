@@ -7,6 +7,7 @@ export default function Video() {
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" alt="Video de fundo" />
       </video>
+      <div className="transicao1"></div>
     </div>
   );
 }

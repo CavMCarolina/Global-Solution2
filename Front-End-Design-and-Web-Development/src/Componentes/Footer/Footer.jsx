@@ -72,9 +72,6 @@ export default function Footer() {
   ];
   return (
     <footer>
-      <div className="background-container">
-        <img className="bg" src={footer} />
-      </div>
       <div className="equipe">
         <h2>Nossa Equipe:</h2>
         {integrantes.map(integrante => (
