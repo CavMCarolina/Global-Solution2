@@ -16,6 +16,9 @@ Nossa solução envolve um sistema de monitoramento ambiental, onde utilizamos s
 - PubSubClient.
 
 ## INSTRUÇÕES DE USO
+O nosso projeto conta com um ESP32 conectado a dois potenciômetros e um sensor DHT22. O potenciômetro, do tipo slide, é utilizado para simular a leitura do pH da água, variando de 0 a 14. O segundo potenciômetro mede a oxigenação da água, com uma escala de 0 a 100%. Já o sensor DHT22 é responsável por captar a temperatura da água.
+Em primeiro lugar devemos importar três bibliotecas: DHT sensor library, WiFi, PubSubClient, e em segundo conetamos os pinos dos sensores: pH no 34, oxigênio no 35 e DHT no 23. Antes de iniciarmos, nos conetar no HiveMQ com o tópico /GS2/#, após isso, os dados serão direcionados e recebidos dos sensores em tempo real.
+Devemos configurar o HiveMQ ao NodeRed e finalmente o tópico é capturado e passado por uma função para ser interpretado pelo TagoIO. Por fim, os dados são apresentados pelo TagoIO por meio de um dashboard, onde os três sensores são identificados por temp1, ph1 e oxy1, conforme definidos no NodeRed. Além disso, foram implementadas uma função no NodeRed que recebe o dado de uma localização que representa a posição de cada sensor e funciona da mesma forma para os outros dois sensores.
 
 ## CÓDIGO
 <a href="./blue_watch.c++">Código do BlueWatch =D</a>
