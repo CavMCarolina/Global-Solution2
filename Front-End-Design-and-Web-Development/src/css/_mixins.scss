@@ -1,0 +1,43 @@
+@use 'variables';
+
+@mixin espacamento($m, $p) {
+    margin: $m;
+    padding: $p;
+}
+
+@mixin flex($justify, $direction: row, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin link($color, $decoration: none) {
+    color: $color;
+    text-decoration: $decoration;
+}
+
+@mixin position($position, $top: 0, $left:0) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin text($size, $weight: 400, $color: variables.$cor_texto, $transform: none, $spacing: auto) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+}
+
+@mixin div-config($bg, $border, $radius) {
+    background-color: $bg;
+    border: 1px solid $border;
+    border-radius: $radius;
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nome": "Oceana",
+        "contato": "+55 61 32471800",
+        "sobre": "A Oceana foi fundada em 2001 e é a maior organização internacional focada exclusivamente na conservação dos oceanos. Nossos escritórios ao redor do mundo trabalham juntos para aumentar a biodiversidade e abundância de nossos oceanos através de campanhas estratégicas direcionadas que visam atingir resultados mensuráveis. Os oceanos cobrem 71% do planeta, e sua importância para nós é tão grande quanto seu tamanho. Nossos oceanos abrigam a maior parte da vida do planeta e exercem um papel fundamental em vários processos naturais, como regulação climática e absorção de CO2. Os oceanos são responsáveis pelo sustento de um número incontável de pescadores ao redor do mundo. Os oceanos alimentam milhões de pessoas e têm a capacidade de fornecer recursos marinhos suficientes para a produção diária de uma refeição saudável para um bilhão de pessoas. Entretanto, os oceanos estão ameaçados. Pesquisadores relatam que a quantidade de peixes capturados nas últimas décadas vem diminuindo. Felizmente, nós sabemos como solucionar esse problema. A gestão pesqueira com base na ciência sugere que se estabeleçam cotas máximas de pesca, medidas de redução de captura acidental e proteção de habitats marinhos. Onde essa estratégia foi implementada, observou-se a recuperação dos oceanos. A Oceana dedica-se a promover a gestão pesqueira com base na ciência e a restaurar os oceanos do mundo.",
+        "logo": "https://brasil.oceana.org/wp-content/uploads/sites/23/logo_pt_full.png",
+        "link": "https://brasil.oceana.org/"
+    },
+    {
+        "id": 2,
+        "nome": "Aquasis",
+        "contato": "(85) 4105-2745",
+        "sobre": "A AQUASIS - Associação de Pesquisa e Preservação de Ecossistemas Aquáticos foi fundada em 1992 por um grupo de estudantes da Universidade Federal do Ceará - UFC e Universidade Estadual do Ceará - UECE, no anseio não apenas de pôr em prática aquilo era aprendido na academia, mas também pela percepção de que a vida marinha, já naquele tempo, precisava de ajuda. A união de jovens dispostos a fazer a diferença era o esforço necessário para fincar as bases do que hoje se materializa como uma das instituições conservacionistas mais respeitadas do país. Hoje, a instituição conta com três frentes de atuação: o Programa de Mamíferos Marinhos (PMM), o Programa de Aves (PAVES) e o Núcleo de Educação Ambiental (NEA). A Aquasis é uma instituição comprometida não apenas com a conservação de espécies ameaçadas de extinção, como também tem o objetivo de fomentar ações que promovam o protagonismo das comunidades locais, ampliando seu potencial de desenvolvimento sustentável, trabalhando sempre em parceria com lideranças e membros do poder público dos município onde suas bases se encontram.",
+        "logo": "https://static.wixstatic.com/media/b8fc85_378d58ee95234eb5945d4a717ed2c0ee~mv2.png/v1/fill/w_328,h_198,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Aquasis-30-C.png",
+        "link": "https://www.aquasis.org/"
+    },
+    {
+        "id": 3,
+        "nome": "Projeto Tamar",
+        "contato": "fundacao_projetotamar@tamar.org.br",
+        "sobre": "Instituição que atua no litoral brasileiro desde a década de 80, o Projeto Tamar tem como missão promover a recuperação das tartarugas marinhas, desenvolvendo ações de pesquisa, conservação e inclusão social. A entidade é co-executora do PAN - Plano Nacional de Ação para a Conservação das Tartarugas Marinhas no Brasil do ICMBio/MMA, sendo responsável por grande parte das ações previstas. Está presente em 23 localidades distribuídas em oito estados brasileiros, entre zonas costeiras e ilhas oceânicas: Rio Grande do Norte, Pernambuco, Sergipe, Bahia, Espírito Santo, Rio de Janeiro, São Paulo e Santa Catarina. O projeto desenvolve ações de pesquisa, manejo e proteção das cinco espécies de tartarugas marinhas que ocorrem no Brasil, além de atividades de envolvimento comunitário, inclusão social, sensibilização e educação ambiental, valorização da cultura local e geração de oportunidades de trabalho e renda. Como resultado desse esforço contínuo vem obtendo conquistas importantes: recuperação das populações de tartarugas comprovada; ampliação do conhecimento científico; apoio das comunidades litorâneas que cessaram o uso direto das tartarugas passando a protegê-las; sensibilização e apoio da sociedade em geral e a geração de recursos próprios (sustentabilidade). ",
+        "logo": "https://seeklogo.com/images/P/projeto-tamar-logo-396B065148-seeklogo.com.png",
+        "link": "https://www.tamar.org.br/index.php"
+    },
+    {
+        "id": 4,
+        "nome": "Oceanica",
+        "contato": "+55 (84) 3238-2204",
+        "sobre": "A Oceânica - Pesquisa, Educação e Conservação foi fundada em 2002, como Organização da Sociedade Civil, em busca da conservação dos ambientes costeiro-marinhos, integrando pesquisa científica, educação ambiental e propostas de conservação. A OCEÂNICA tem como principal área de atuação o litoral potiguar, no entanto ao longo da trajetória mergulhou em outros territórios como Fernando de Noronha e mais recente em águas internacionais, no mar do Caribe. Suas ações de pesquisa envolvem estudos de mapeamento e caracterização dos meios biológico, geomorfológico e social em áreas estratégicas em função do uso e potencialidade do ambiente. Nas ações de Educação Ambiental a OCEÂNICA trabalha tanto com o sistema educacional formal, envolvendo educadores e alunos, quanto na educação informal, na capacitação de pessoas locais e grupos de usuários do litoral.",
+        "logo": "https://oceanica.org.br/wp-content/uploads/2019/12/logo_oceanica_branca_nova-scaled-e1576153375566.png",
+        "link": "https://oceanica.org.br/"
+    },
+    {
+        "id": 5,
+        "nome": "Sea Shepherd Brasil",
+        "contato": "info@seashepherd.org.br",
+        "sobre": "A Sea Shepherd Brasil é uma organização de conservação marinha sem fins lucrativos fundada pelo Cpt. Paul Watson, junto com Daniel Vairo e Alex Castro em 1999, que atua em defesa do oceano e combate atividades que destroem seus habitats. A Sea Shepherd foi fundada em 1977 pelo Capitão Paul Watson para agir de maneira direta no combate a crimes ambientais no oceano. No Brasil, Capitão Paul Watson e co-fundadores criaram a Sea Shepherd Brasil como uma uma organização 100% independente que segue os valores e missão originais da Sea Shepherd. Nossa missão é proteger a vida debaixo d'água e acabar com a destruição de habitats marinhos. A Sea Shepherd Brasil utiliza táticas inovadoras e ação direta para defender, conservar e proteger a biodiversidade de nossos rios e mares e aplicar as leis de conservação Desde os gigantes do mar até as menores criaturas, a missão da Sea Shepherd Brasil é proteger todas as espécies marinhas que vivem em nosso oceano. Nossas campanhas têm defendido baleias, golfinhos, focas, tubarões, pinguins, tartarugas, peixes, krill e aves aquáticas da pesca ilegal, pesca insustentável, destruição de habitats e exploração em cativeiro.",
+        "logo": "https://seashepherd.org.br/wp-content/uploads/2023/05/jolly-brasil-2023-05.png",
+        "link": "https://seashepherd.org.br/"
+    }
+]

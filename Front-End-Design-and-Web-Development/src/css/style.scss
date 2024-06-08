@@ -1,0 +1,595 @@
+@use "mixins";
+@use "variables";
+
+// Fonte para texto normal
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap");
+
+// Fonte para títulos
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Fonte para as porcentagens
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  @include mixins.espacamento(0, 0);
+}
+
+// Estilizações Gerais pensando em mobile first
+h1 {
+  font-family: "Montserrat", sans-serif;
+  @include mixins.text(auto, 500, auto, uppercase, 2px);
+}
+
+p {
+  color: variables.$cor_texto;
+}
+
+// Header
+.cabecalho {
+  @include mixins.flex(space-around);
+  @include mixins.espacamento(0, 1rem 0);
+  @include mixins.position(fixed);
+  @include mixins.size(100%, auto);
+  transition: background 0.3s, padding 0.3s;
+  z-index: 1000;
+
+  img {
+    @include mixins.size(150px, auto);
+  }
+
+  a {
+    @include mixins.link(variables.$branco);
+    @include mixins.espacamento(0, 15px);
+
+    &:hover {
+      @include mixins.link(variables.$branco, underline);
+    }
+  }
+}
+
+#menuBar {
+  @include mixins.div-config(transparent, transparent, 0);
+  color: variables.$branco;
+  cursor: pointer;
+}
+
+// Deixar o header bonito quando da scroll
+.scrolled {
+  border-bottom: 1px solid variables.$branco;
+  background-color: #244b5eb5;
+  z-index: 1000;
+}
+
+// HOME:
+// Video de fundo
+.background-container {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+video {
+  @include mixins.size(100%, 100vh);
+  z-index: -1000;
+  object-fit: cover;
+  position: relative;
+}
+
+.transicao1 {
+  position: absolute;
+  @include mixins.size(100%, 20vh);
+  bottom: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 92.64%
+  );
+}
+
+// A importancia dos oceanos
+.porcentagens {
+  @include mixins.text(50px, 600, variables.$cor_principal);
+  font-family: "Roboto Mono", monospace;
+  text-align: left;
+}
+
+#importancia {
+  position: relative;
+
+  h1 {
+    @include mixins.espacamento(0, 1rem);
+  }
+}
+
+.importancia {
+  @include mixins.flex(center, column);
+  gap: 50px;
+  @include mixins.espacamento(3rem 0, 0);
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  div {
+    max-width: 280px;
+  }
+}
+
+// Realidade
+.transicao2 {
+  position: absolute;
+  @include mixins.size(100%, 20vh);
+  top: 0;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 32.64%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+#realidade {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/poluicao.jpg");
+  background-size: cover;
+
+  .realidade {
+    position: relative;
+  }
+
+  h1 {
+    @include mixins.position(relative);
+    @include mixins.espacamento(0, 1rem);
+  }
+
+  #carouselExampleAutoplaying {
+    @include mixins.flex(center);
+    @include mixins.espacamento(1rem 0, 0 0 2rem);
+
+    .carousel-inner {
+      @include mixins.size(300px, 300px);
+
+      img {
+        object-fit: cover;
+        @include mixins.size(100%, 300px);
+        @include mixins.div-config(none, transparent, 20px);
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: auto;
+      bottom: auto;
+      @include mixins.espacamento(0 1rem, 0);
+    }
+  }
+}
+
+// Estilização dos títulos das próximas seções
+.titulo {
+  position: relative;
+  @include mixins.espacamento(2rem 0 2rem -20px, 15px 15px 15px 35px);
+  @include mixins.div-config(
+    variables.$cor_principal,
+    variables.$cor_escura,
+    15px
+  );
+  color: variables.$branco;
+  max-width: fit-content;
+}
+
+.negativo {
+  margin-top: -30px;
+}
+
+.conteudo {
+  @include mixins.espacamento(0 1.5rem, 0);
+  text-align: justify;
+}
+
+// ONGs
+.ongs {
+  @include mixins.flex(center, column-reverse);
+
+  .logo_ongs {
+    @include mixins.flex(center);
+    @include mixins.espacamento(1rem 0 2rem 0, 50px 40px);
+    @include mixins.size(100%, 100%);
+  }
+
+  .primeiras {
+    @include mixins.div-config(variables.$branco, variables.$cor_escura, 20px);
+  }
+
+  .restantes {
+    @include mixins.div-config(
+      variables.$cor_principal,
+      variables.$cor_escura,
+      20px
+    );
+  }
+
+  a {
+    @include mixins.link(variables.$cor_principal, none);
+
+    &:hover {
+      @include mixins.link(variables.$cor_principal, underline);
+    }
+  }
+
+  div {
+    margin-bottom: 3rem;
+  }
+}
+
+// O Prototipo
+#prototipo {
+  margin-bottom: 3rem;
+}
+
+.prototipo {
+  @include mixins.flex(center, column);
+
+  img {
+    @include mixins.size(100%, auto);
+    @include mixins.div-config(none, transparent, 20px);
+    max-width: 500px;
+  }
+}
+
+.botao {
+  @include mixins.div-config(transparent, variables.$cor_principal, 100px);
+  @include mixins.espacamento(0, 15px 8%);
+  color: variables.$cor_principal;
+  position: relative;
+
+  &:hover {
+    @include mixins.div-config(
+      variables.$cor_principal,
+      variables.$cor_escura,
+      100px
+    );
+    color: variables.$branco;
+  }
+}
+
+.foto_api {
+  @include mixins.espacamento(2rem 0, 0);
+
+  img {
+    object-fit: cover;
+    @include mixins.size(100%, 300px);
+    @include mixins.div-config(none, transparent, 20px);
+  }
+}
+
+#botao_api {
+  @include mixins.espacamento(0 1rem, auto);
+}
+
+form {
+  @include mixins.espacamento(5% 8%, 0);
+}
+
+footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/footer.png");
+  background-size: cover;
+  @include mixins.espacamento(0, 3rem 0);
+  border-top: 1px solid variables.$cor_escura;
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    @include mixins.text(auto, 500, variables.$branco, uppercase, 2px);
+  }
+
+  .equipe {
+    @include mixins.flex(center, column);
+
+    a {
+      @include mixins.link(variables.$branco);
+
+      &:hover {
+        @include mixins.link(variables.$branco, underline);
+      }
+    }
+  }
+
+  .parceiros {
+    margin-top: 3rem;
+    text-align: center;
+
+    .imagens_parceiros {
+      @include mixins.div-config(
+        variables.$branco_transparente,
+        variables.$cor_escura,
+        15px
+      );
+      @include mixins.espacamento(0 1rem, 10px 5px);
+      max-width: 480px;
+
+      img {
+        @include mixins.espacamento(5px 10px, 0);
+      }
+
+      #o20,
+      #aws {
+        @include mixins.size(120px, auto);
+      }
+
+      #unesco,
+      #softtek {
+        @include mixins.size(100px, auto);
+      }
+
+      #un {
+        @include mixins.size(80px, auto);
+      }
+
+      #ss {
+        @include mixins.size(150px, auto);
+      }
+
+      #usp {
+        @include mixins.size(250px, auto);
+      }
+    }
+  }
+}
+
+// Mobile first :)
+@media screen and (max-width: 767px) {
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    @include mixins.flex(none, column, none);
+    @include mixins.size(250px, 100%);
+    background-color: variables.$cor_principal;
+    border-left: 1px solid variables.$branco;
+    @include mixins.espacamento(0, 20px);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Sidebar aberta */
+  .sidebar.open {
+    right: 0; /* Move para dentro da tela */
+  }
+
+  /* Links do sidebar */
+  .sidebar a {
+    @include mixins.link(variables.$branco, none);
+    @include mixins.espacamento(0, 10px 0);
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none;
+    @include mixins.position(fixed);
+    @include mixins.size(100%, 100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  /* Overlay aberta */
+  .overlay.open {
+    display: block;
+  }
+
+  #realidade {
+    h1 {
+      color: variables.$branco
+    }
+  }
+
+  // ONGs
+  .ongs {
+    img {
+      @include mixins.size(90%, 100%);
+      max-width: 300px;
+    }
+
+    .logo_ongs {
+      max-height: 350px;
+    }
+  }
+
+  // Footer
+  footer {
+    @include mixins.flex(center, column);
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  // Estilizações para o sidebar;
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    @include mixins.flex(none, column, none);
+    @include mixins.size(250px, 100%);
+    background-color: variables.$cor_principal;
+    border-left: 1px solid variables.$branco;
+    @include mixins.espacamento(0, 20px);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Sidebar aberta */
+  .sidebar.open {
+    right: 0; /* Move para dentro da tela */
+  }
+
+  /* Links do sidebar */
+  .sidebar a {
+    @include mixins.link(variables.$branco, none);
+    @include mixins.espacamento(0, 10px 0);
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none;
+    @include mixins.position(fixed);
+    @include mixins.size(100%, 100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  /* Overlay aberta */
+  .overlay.open {
+    display: block;
+  }
+
+  .importancia {
+    @include mixins.flex(space-around);
+    flex-wrap: wrap;
+  }
+
+  .conteudo {
+    @include mixins.espacamento(auto 7%, 0);
+  }
+
+  .foto_api {
+    img {
+      @include mixins.size(100%, 500px);
+    }
+  }
+
+  #realidade {
+    #carouselExampleAutoplaying {
+      @include mixins.espacamento(0, 2rem 0 5rem);
+
+      .carousel-inner {
+        @include mixins.size(70%, 500px);
+
+        img {
+          @include mixins.size(100%, 500px);
+        }
+      }
+    }
+  }
+
+  footer {
+    @include mixins.flex(space-around);
+    flex-wrap: wrap;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  #menuBar {
+    display: none;
+  }
+
+  .cabecalho {
+    @include mixins.espacamento(0, 2rem 0);
+  }
+
+  .importancia {
+    @include mixins.flex(space-around);
+    flex-wrap: wrap;
+  }
+
+  .conteudo {
+    @include mixins.espacamento(auto 10%, 0);
+  }
+
+  .foto_api {
+    img {
+      @include mixins.size(100%, 500px);
+    }
+  }
+
+  #realidade {
+    #carouselExampleAutoplaying {
+      @include mixins.espacamento(0, 2rem 0 5rem);
+
+      .carousel-inner {
+        @include mixins.size(70%, 500px);
+
+        img {
+          @include mixins.size(100%, 500px);
+        }
+      }
+    }
+  }
+
+  footer {
+    @include mixins.flex(space-around);
+  }
+}
+
+@media (min-width: 1300px) {
+  #menuBar {
+    display: none;
+  }
+
+  .cabecalho {
+    @include mixins.espacamento(0, 2rem 0);
+  }
+
+  .importancia {
+    @include mixins.flex(space-between);
+  }
+
+  .conteudo {
+    @include mixins.espacamento(auto 10%, 0);
+  }
+
+  .foto_api {
+    img {
+      @include mixins.size(100%, 650px);
+    }
+  }
+  
+  #realidade {
+    #carouselExampleAutoplaying {
+      @include mixins.espacamento(0, 2rem 0 5rem);
+
+      .carousel-inner {
+        @include mixins.size(70%, 650px);
+
+        img {
+          @include mixins.size(100%, 650px);
+        }
+      }
+    }
+  }
+
+  .prototipo {
+    @include mixins.flex(space-between);
+
+    p {
+      max-width: 50%;
+    }
+  }
+
+  .ongs {
+    @include mixins.flex(space-between, row, start);
+    @include mixins.espacamento(1.5rem 0 3rem, 0);
+
+    .texto {
+      max-width: 50%;
+      margin-bottom: 0;
+    }
+
+    .logo_ongs {
+      @include mixins.espacamento(0, auto);
+      max-width: 440px;
+      max-height: 60%;
+
+      img {
+        max-width: 360px;
+      }
+    }
+  }
+
+  footer {
+    @include mixins.flex(space-around);
+  }
+}
