@@ -17,7 +17,7 @@ Oxigenação:
 
 pH:
 - Verde: entre 6.99 e 8.5;
-- Amarelo: entre 6 e 6.99 ou entre 8.6 e 10;
+- Amarelo: entre 6 e 6.99 ou entre 8.5 e 10;
 - Vermelho: entre 0 e 6 ou entre 10 e 14.
 
 ## INSTRUÇÕES DE USO
@@ -33,4 +33,4 @@ Importar a biblioteca Pandas.
 - Biblioteca Pandas.
 
 ## Código:
-<a href="./blueWatch.ipynb">Código de Python =D</a>
+<a href="./GS2.ipynb">Código de Python =D</a>
